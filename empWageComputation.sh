@@ -8,7 +8,8 @@ read c
 operation1=$(($(($a+$b))*$c))
 operation2=$(($(($a*$b))+$c))
 operation3=$(($(($c+$a))/$b))
-
+operation4=$(($(($a%$b))+$c))
 echo $operation1
 echo $operation2
 echo $operation3
+echo $operation4

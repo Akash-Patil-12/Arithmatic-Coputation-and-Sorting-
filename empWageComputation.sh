@@ -31,7 +31,7 @@ for ((j=0;j<4;j++))
 do
 	for ((k=(($j+1));k<4;k++))
 	do
-		if ((operationArray[$j] < operationArray[$k] ))
+		if (( operationArray[$j] < operationArray[$k] ))
       then
 			tempstore=${operationArray[$j]}
 			operationArray[$j]=${operationArray[$k]}
@@ -41,3 +41,18 @@ do
 done
 
 echo "After sorting in descending order Computation result is : ${operationArray[@]} "
+
+for ((j=0;j<4;j++))
+do
+	for ((k=(($j+1));k<4;k++))
+	do
+		if(( operationArray[$j] > operationArray[$k] ))
+      then
+			tempstore=${operationArray[$j]}
+			operationArray[$j]=${operationArray[$k]}
+			operationArray[$k]=$tempstore
+		fi
+	done
+done
+
+echo "After sorting in Ascending order computation result is : ${operationArray[@]}"

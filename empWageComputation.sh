@@ -26,3 +26,18 @@ do
 	operationArray[(($i))]=${storeResult[$index]}
 done
 echo "operation value in array is : ${operationArray[@]}"
+
+for ((j=0;j<4;j++))
+do
+	for ((k=(($j+1));k<4;k++))
+	do
+		if ((operationArray[$j] < operationArray[$k] ))
+      then
+			tempstore=${operationArray[$j]}
+			operationArray[$j]=${operationArray[$k]}
+         operationArray[$k]=$tempstore
+     	fi
+   done
+done
+
+echo "After sorting in descending order Computation result is : ${operationArray[@]} "

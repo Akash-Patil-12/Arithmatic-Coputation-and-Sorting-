@@ -5,4 +5,5 @@ echo "Enter a value of b"
 read b
 echo "Enter a value of c"
 read c
-echo "Entered value are a=$a b=$b c=$c"
+operation1=$(($(($a+$b))*$c))
+echo $operation1
